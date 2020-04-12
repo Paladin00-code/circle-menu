@@ -1,4 +1,5 @@
 body {
+  background-color: #e0e048;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -35,7 +36,7 @@ body {
   border-radius: 50%;
   text-decoration: none;
   color: #0af30a;
-  background-color: #0e0808;
+  background-color: #2d2d2d;
   -webkit-transition: 0.3s;
   transition: 0.3s; }
 
@@ -51,7 +52,8 @@ body {
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  background-color: #0e0808; }
+  background-color: #2d2d2d;
+  outline: none; }
 
 .circular-menu__lines,
 .circular-menu__lines::before,
@@ -59,8 +61,21 @@ body {
   position: absolute;
   width: 40px;
   height: 6px;
-  background-color: #c0c0c0;
+  background-color: #cecece;
   -webkit-transition: 0.3c;
   transition: 0.3c; }
 
-/*# sourceMappingURL=style.css.map */
+.circular-menu__lines {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: transparent; }
+
+.circular-menu__lines::before {
+  content: ''; }
+
+.circular-menu__lines::after {
+  content: '';
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg); }

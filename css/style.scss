@@ -1,4 +1,9 @@
+$all-background: #e0e048;
+$background-circle: #2d2d2d;
+$text: #cecece;
+
 body{
+    background-color: $all-background;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,7 +29,7 @@ body{
     border-radius: 50%;
     text-decoration: none;
     color: #0af30a;
-    background-color: rgb(14, 8, 8);
+    background-color: $background-circle;
     transition: 0.3s;
 }
 
@@ -37,7 +42,8 @@ body{
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    background-color: rgb(14, 8, 8);
+    background-color: $background-circle;
+    outline: none;
 }
 
 .circular-menu__lines,
@@ -46,6 +52,22 @@ body{
     position: absolute;
     width: 40px;
     height: 6px;
-    background-color: #c0c0c0;
+    background-color: $text;
     transition: 0.3c;
+}
+
+.circular-menu__lines{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: transparent;
+}
+
+.circular-menu__lines::before{
+    content: '';
+}
+
+.circular-menu__lines::after{
+    content: '';
+    transform: rotate(90deg);
 }
