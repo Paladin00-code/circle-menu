@@ -1,0 +1,51 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.circular-menu{
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+.circular-menu__item{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    text-decoration: none;
+    color: #0af30a;
+    background-color: rgb(14, 8, 8);
+    transition: 0.3s;
+}
+
+.circular-menu__button{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: rgb(14, 8, 8);
+}
+
+.circular-menu__lines,
+.circular-menu__lines::before,
+.circular-menu__lines::after{
+    position: absolute;
+    width: 40px;
+    height: 6px;
+    background-color: #c0c0c0;
+    transition: 0.3c;
+}
