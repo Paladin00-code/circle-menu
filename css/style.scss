@@ -14,6 +14,8 @@ body{
     position: relative;
     width: 300px;
     height: 300px;
+    margin: 20px;
+    // padding: 20px;
 }
 
 .circular-menu__item{
@@ -28,9 +30,10 @@ body{
     height: 80px;
     border-radius: 50%;
     text-decoration: none;
-    color: #0af30a;
-    background-color: $background-circle;
-    transition: 0.3s;
+    color: #f6f6e9;
+    background-color: #13334c;
+    transition: 0.5s;
+    outline: none;
 }
 
 .circular-menu__button{
@@ -38,12 +41,17 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    display: flex;
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    background-color: $background-circle;
+    background-color: #13334c;
     outline: none;
+    transition: 1s;
+}
+
+.circular-menu__button:hover,
+.circular-menu__item:hover{
+    background-color: #0a7dd4;
 }
 
 .circular-menu__lines,
@@ -52,8 +60,8 @@ body{
     position: absolute;
     width: 40px;
     height: 6px;
-    background-color: $text;
-    transition: 0.3c;
+    background-color: #f6f6e9;
+    transition: 1s;
 }
 
 .circular-menu__lines{
@@ -61,6 +69,7 @@ body{
     left: 50%;
     transform: translate(-50%,-50%);
     background-color: transparent;
+    transition: 1s;
 }
 
 .circular-menu__lines::before{
@@ -70,4 +79,12 @@ body{
 .circular-menu__lines::after{
     content: '';
     transform: rotate(90deg);
+}
+
+.circular-menu__button_active .circular-menu__lines::before{
+    transform: rotate(45deg);
+}
+
+.circular-menu__button_active .circular-menu__lines::after{
+    transform: rotate(-45deg);
 }
