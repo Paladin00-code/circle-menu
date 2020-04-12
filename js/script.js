@@ -23,7 +23,6 @@ menus.map((menu) => {
 
             for (let index = 0; index < length; index++) {
                 const angle = index * arc;
-                console.log(angle);
                 const x=radius*Math.cos(angle);
                 const y=radius*Math.sin(angle);
 

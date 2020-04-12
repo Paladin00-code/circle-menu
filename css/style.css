@@ -40,7 +40,6 @@ body {
   outline: none;
   transition: 1s; }
 
-.circular-menu__button:hover,
 .circular-menu__item:hover {
   background-color: #0a7dd4; }
 
@@ -68,7 +67,7 @@ body {
   transform: rotate(90deg); }
 
 .circular-menu__button_active .circular-menu__lines::before {
-  transform: rotate(45deg); }
+  transform: rotate(225deg); }
 
 .circular-menu__button_active .circular-menu__lines::after {
-  transform: rotate(-45deg); }
+  transform: rotate(-225deg); }
